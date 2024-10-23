@@ -1,0 +1,3 @@
+tirs des rockets rapidement, elles suivent le joueur.
+Se rapproche du joueur lentement.
+Beaucoup de vie.

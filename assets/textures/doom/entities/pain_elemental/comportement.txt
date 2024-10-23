@@ -1,0 +1,2 @@
+Ne suit pas le joueur, sauf si il ne l'a pas dans sa ligne de vue.
+Invoque des lost souls.

@@ -1,0 +1,41 @@
+UI_PAUSE_BG ./assets/textures/ui/backgrounds/bg_transparent_pixels.xpm
+UI_PAUSE_LABEL ./assets/textures/ui/labels/label_pause.xpm
+UI_PAUSE_BTN_RESUME_OFF ./assets/textures/ui/buttons/btn_resume_off.xpm
+UI_PAUSE_BTN_RESUME_ON ./assets/textures/ui/buttons/btn_resume_on.xpm
+UI_PAUSE_BTN_QUIT_OFF ./assets/textures/ui/buttons/btn_quit_off.xpm
+UI_PAUSE_BTN_QUIT_ON ./assets/textures/ui/buttons/btn_quit_on.xpm
+
+UI_GAMEOVER_BG ./assets/textures/ui/backgrounds/bg_transparent_pixels.xpm
+UI_GAMEOVER_LABEL ./assets/textures/ui/labels/label_gameover.xpm
+UI_GAMEOVER_BTN_QUIT_OFF ./assets/textures/ui/buttons/btn_quit_off.xpm
+UI_GAMEOVER_BTN_QUIT_ON ./assets/textures/ui/buttons/btn_quit_on.xpm
+UI_GAMEOVER_BTN_RESTART_OFF assets/textures/ui/buttons/btn_restart_off.xpm
+UI_GAMEOVER_BTN_RESTART_ON assets/textures/ui/buttons/btn_restart_on.xpm
+
+UI_WIN_BG ./assets/textures/ui/backgrounds/bg_transparent_pixels.xpm
+UI_WIN_LABEL ./assets/textures/ui/labels/label_win.xpm
+UI_WIN_TROPHY ./assets/textures/ui/labels/trophy.xpm
+UI_WIN_BTN_QUIT_OFF ./assets/textures/ui/buttons/btn_quit_off.xpm
+UI_WIN_BTN_QUIT_ON ./assets/textures/ui/buttons/btn_quit_on.xpm
+
+UI_HOME_BG ./assets/textures/ui/backgrounds/bg_transparent_pixels.xpm
+UI_HOME_LABEL assets/textures/ui/labels/Cub3D.xpm
+UI_HOME_BTN_PLAY_OFF assets/textures/ui/buttons/btn_play_off.xpm
+UI_HOME_BTN_PLAY_ON assets/textures/ui/buttons/btn_play_on.xpm
+UI_HOME_BTN_QUIT_OFF assets/textures/ui/buttons/btn_quit_off.xpm
+UI_HOME_BTN_QUIT_ON assets/textures/ui/buttons/btn_quit_on.xpm
+
+UI_LVL_BG ./assets/textures/ui/backgrounds/bg_transparent_pixels.xpm 
+UI_LVL_LABEL assets/textures/ui/labels/level_selection.xpm
+UI_LVL_BTN_LVL1_OFF assets/textures/ui/buttons/btn_lvl1_off.xpm
+UI_LVL_BTN_LVL1_ON assets/textures/ui/buttons/btn_lvl1_on.xpm
+UI_LVL_BTN_LVL2_OFF assets/textures/ui/buttons/btn_lvl2_off.xpm
+UI_LVL_BTN_LVL2_ON assets/textures/ui/buttons/btn_lvl2_on.xpm
+UI_LVL_BTN_LVL3_OFF assets/textures/ui/buttons/btn_lvl3_off.xpm
+UI_LVL_BTN_LVL3_ON assets/textures/ui/buttons/btn_lvl3_on.xpm
+UI_LVL_BTN_LVL4_OFF assets/textures/ui/buttons/btn_lvl4_off.xpm
+UI_LVL_BTN_LVL4_ON assets/textures/ui/buttons/btn_lvl4_on.xpm
+UI_LVL_BTN_LVL5_OFF assets/textures/ui/buttons/btn_lvl5_off.xpm
+UI_LVL_BTN_LVL5_ON assets/textures/ui/buttons/btn_lvl5_on.xpm
+UI_LVL_BTN_PREV_OFF assets/textures/ui/buttons/btn_previous_off.xpm
+UI_LVL_BTN_PREV_ON assets/textures/ui/buttons/btn_previous_on.xpm

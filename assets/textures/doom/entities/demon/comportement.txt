@@ -1,0 +1,2 @@
+Fonce sur le joueur et inflige de gros dégats si il touche, il suit le joueur dans sa charge.
+Beaucoup de pv mais très vulnérable si il fonce sur un mur.

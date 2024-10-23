@@ -1,0 +1,3 @@
+Fonce sur le joueur et explose au contact.
+à la mort, explose.
+peu de vie.

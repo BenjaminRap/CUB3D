@@ -1,0 +1,3 @@
+Lance des boules d'énergies à distance et attaque au corp à coprs.
+peu de dégats et peu de vie
+Ne s'approche pas du joueur, sauf si il ne l'a plus dans sa ligne de vue.

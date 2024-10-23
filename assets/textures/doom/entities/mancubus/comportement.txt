@@ -1,0 +1,3 @@
+Tirs des salves de boules de feu et fait une zone de feu autour de lui si on s'approche trop.
+Gros dégats pour les boules de feu et énorme dégats pour la zone de feu.
+On peut casser ses lances missiles avec le plasma rifle, dans ce cas, il s'approche du joueur pour faire sa zone de feu.

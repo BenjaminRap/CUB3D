@@ -1,0 +1,3 @@
+lance des rockets qui suivent le joueur.
+Possibilité de casser les lance rockets avec le plasma rifle.
+Dans ce cas, suit le joueur et tape au corps à corps.

@@ -1,0 +1,2 @@
+Invoque des démons boostés, infliger suffisement de dégats pour stopper l'invocation.
+Ne cherche pas le joueur, proritise l'invocation.

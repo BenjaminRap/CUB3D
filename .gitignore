@@ -1,0 +1,7 @@
+cub3D
+cub3D_bonus
+mandatory/objs/*
+mandatory/deps/*
+bonus/objs_bonus/*
+bonus/deps_bonus/*
+.vscode/
