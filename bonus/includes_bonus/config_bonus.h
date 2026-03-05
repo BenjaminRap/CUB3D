@@ -18,8 +18,8 @@
 # define NB_DRAW_THREADS		16
 
 # define WIN_TITLE				"Cub3D"
-# define WIN_WIDTH				1920
-# define WIN_HEIGHT				1000
+# define WIN_WIDTH				960
+# define WIN_HEIGHT				500
 # define MAX_DISTANCE			10
 # define PAUSE_BG_DARK_FACTOR	0.4f
 
