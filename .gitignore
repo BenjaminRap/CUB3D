@@ -5,3 +5,5 @@ mandatory/deps/*
 bonus/objs_bonus/*
 bonus/deps_bonus/*
 .vscode/
+.cache
+compile_commands.json
