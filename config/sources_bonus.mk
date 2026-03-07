@@ -79,7 +79,8 @@ EVENT_HANDLERS_FILES_BONUS	=	add_event_handler_bonus.c		\
 								key_press_handler_bonus.c		\
 								mouse_press_handler_bonus.c		\
 								mouse_release_handler_bonus.c	\
-								mouse_move_handler_bonus.c
+								mouse_move_handler_bonus.c		\
+								x_input_mouse_event_bonus.c
 EVENT_HANDLERS_BONUS		=	$(addprefix $(EVENT_HANDLERS_DIR_BONUS), $(EVENT_HANDLERS_FILES_BONUS))
 
 # RENDER

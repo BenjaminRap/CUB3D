@@ -119,6 +119,7 @@ bool	t_game_init(t_game *game)
 		&& init_game_uis(game, &game->uis)
 		&& init_all_map_textures(game)
 		&& t_mlx_launch(&game->mlx)
+		&& x_mouse_init(&game->mlx)
 		&& add_event_handlers(game)
 	);
 }

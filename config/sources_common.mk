@@ -43,4 +43,4 @@ MLX_FILE				=	libmlx_Linux.a
 MLX						=	$(addprefix $(MLX_DIR), $(MLX_FILE))
 MLX_HEADERS_FILE		=	mlx.h
 MLX_HEADERS				=	$(addprefix $(MLX_DIR), $(MLX_HEADER_FILE))
-MLX_FLAGS				=	-L$(MLX_DIR) -lmlx_Linux -lXext -lX11
+MLX_FLAGS				=	-L$(MLX_DIR) -lmlx_Linux -lXext -lX11 -lXi

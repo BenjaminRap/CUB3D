@@ -13,10 +13,12 @@
 #ifndef EVENT_HANDLERS_BONUS_H
 # define EVENT_HANDLERS_BONUS_H
 
+#include <stdbool.h>
 # define MOTION_X_FACTOR	0.05f
 # define MOTION_Y_FACTOR	20.0f
 
 typedef struct s_game	t_game;
+typedef struct s_mlx	t_mlx;
 
 bool	add_event_handlers(t_game *game);
 int		destroy_handler(t_game *game);
@@ -25,5 +27,7 @@ int		key_press_handler(int key, t_game *game);
 int		mouse_move_handler(int x, int y, t_game *game);
 int		mouse_press_handler(int button, int x, int y, t_game *game);
 int		mouse_release_handler(int button, int x, int y, t_game *game);
+bool	x_mouse_init(t_mlx* mlx);
+void	x_mouse_event_handler(t_game* game);
 
 #endif

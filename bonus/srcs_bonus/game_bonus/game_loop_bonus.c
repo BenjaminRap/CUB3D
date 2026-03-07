@@ -17,6 +17,8 @@
 #include "error_bonus.h"
 #include "utils_bonus.h"
 #include "libft.h"
+#include "event_handlers_bonus.h"
+#include <unistd.h>
 
 static bool	game_loop_handle_fps(t_game *game, float *delta_time)
 {
@@ -120,6 +122,7 @@ int	game_loop(t_game *game)
 		error_exit(game, ERR_GAME_LOOP);
 	if (!game_loop_handle_fps(game, &delta_time))
 		error_exit(game, ERR_FPS);
+	x_mouse_event_handler(game);
 	if (game->state == STATE_HOME)
 		draw_ui(&game->uis.home, game->mlx.img_buff);
 	else if (game->state == STATE_LEVEL_SELECTION)
