@@ -12,8 +12,17 @@
 
 #include "libft.h"
 #include "cub3d_bonus.h"
-#include "mlx.h"
 #include "error_bonus.h"
+#include "event_handlers_bonus.h"
+#include <X11/Xlib.h>
+#include <signal.h>
+
+volatile sig_atomic_t	running = 1;
+
+void	signal_handler()
+{
+	running = 0;
+}
 
 int	main(int argc, char **argv)
 {
@@ -34,7 +43,16 @@ int	main(int argc, char **argv)
 		t_game_destroy(&game);
 		return (EXIT_FAILURE);
 	}
-	mlx_loop(game.mlx.mlx_ptr);
+	signal(SIGINT, signal_handler);
+	signal(SIGTERM, signal_handler);
+	signal(SIGQUIT, signal_handler);
+	signal(SIGHUP, signal_handler);
+	while (true)
+	{
+		game_loop(&game);
+		if (running == 0)
+			break ;
+	}
 	t_game_destroy(&game);
 	return (0);
 }

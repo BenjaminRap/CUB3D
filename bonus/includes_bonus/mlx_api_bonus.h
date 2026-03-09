@@ -13,19 +13,20 @@
 #ifndef MLX_API_BONUS_H
 # define MLX_API_BONUS_H
 
+#include <X11/X.h>
 # include <stdlib.h>
 # include <stdbool.h>
 # include <stdint.h>
 
-# define KEY_ESC 					65307
+# define KEY_ESC 					9
 # define KEY_LEFT 					65361
 # define KEY_RIGHT					65363
-# define KEY_W 						119
-# define KEY_A 						97
-# define KEY_S 						115
-# define KEY_D 						100
+# define KEY_W 						25
+# define KEY_A 						38
+# define KEY_S 						39
+# define KEY_D 						40
 # define KEY_P 						112
-# define KEY_E						101
+# define KEY_E						26
 # define KEY_M						109
 # define KEY_SPACE					32
 # define FIRST_WEAPON_KEY			49
@@ -54,6 +55,7 @@ struct s_mlx
 	int		height;
 	int		height_half;
 	char	*title;
+	Atom	delete;
 };
 
 struct s_image
