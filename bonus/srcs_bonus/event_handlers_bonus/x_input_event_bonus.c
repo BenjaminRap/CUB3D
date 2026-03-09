@@ -50,6 +50,22 @@ bool	x_mouse_init(t_mlx* mlx)
 	return true;
 }
 
+void	handler_raw_motion(t_game* game, XIRawEvent* e)
+{
+	double dx = 0;
+	double dy = 0;
+
+	if (XIMaskIsSet(e->valuators.mask, 0))
+		dx = e->raw_values[0];
+
+	if (XIMaskIsSet(e->valuators.mask, 1))
+		dy = e->raw_values[1];
+
+	game->player.rotation_speed.x = -dx * MOTION_X_FACTOR;
+	game->player.rotation_speed.y = -dy * MOTION_Y_FACTOR;
+	return ;
+}
+
 void	x_mouse_event_handler(t_game* game)
 {
 	Display*	display = ((t_xvar*)game->mlx.mlx_ptr)->display;
@@ -67,61 +83,35 @@ void	x_mouse_event_handler(t_game* game)
 		if (!XGetEventData(display, &ev.xcookie))
 			continue;
 
-		switch (ev.xcookie.evtype) {
-			case XI_RawMotion:
-			{
-				XIRawEvent* e = (XIRawEvent*)ev.xcookie.data;
-
-				double dx = 0;
-				double dy = 0;
-
-				if (XIMaskIsSet(e->valuators.mask, 0))
-					dx = e->raw_values[0];
-
-				if (XIMaskIsSet(e->valuators.mask, 1))
-					dy = e->raw_values[1];
-
-				game->player.rotation_speed.x = -dx * MOTION_X_FACTOR;
-				game->player.rotation_speed.y = -dy * MOTION_Y_FACTOR;
-				break ;
-			}
-			case XI_Motion:
-			{
-				XIDeviceEvent*	e = ev.xcookie.data;
-
-				mouse_move_handler(e->event_x, e->event_y, game);
-				break ;
-			}
-			case XI_ButtonPress:
-			{
-				XIDeviceEvent*	e = ev.xcookie.data;
-				mouse_press_handler(e->detail, e->event_x, e->event_y, game);
-
-				printf("mouse pressed : %d\n", e->detail);
-				break ;
-			}
-			case XI_ButtonRelease:
-			{
-				XIDeviceEvent*	e = ev.xcookie.data;
-				mouse_release_handler(e->detail, e->event_x, e->event_y, game);
-
-				break ;
-			}
-			case XI_KeyPress:
-			{
-				XIDeviceEvent*	e = ev.xcookie.data;
-				key_press_handler(e->detail, game);
-
-				break ;
-			}
-			case XI_KeyRelease:
-			{
-				XIDeviceEvent*	e = ev.xcookie.data;
-				key_release_handler(e->detail, game);
-
-				break ;
-			}
+		if (ev.xcookie.evtype == XI_RawMotion)
+		{
+			handler_raw_motion(game, ev.xcookie.data);
+			XFreeEventData(display, &ev.xcookie);
+			continue ;
 		}
+		XIDeviceEvent*	e = ev.xcookie.data;
+		int				detail = e->detail;
+		double			x = e->event_x;
+		double			y = e->event_y;
+		e = NULL;
 		XFreeEventData(display, &ev.xcookie);
+
+		switch (ev.xcookie.evtype) {
+			case XI_Motion:
+				mouse_move_handler(x, y, game);
+				break ;
+			case XI_ButtonPress:
+				mouse_press_handler(detail, x, y, game);
+				break ;
+			case XI_ButtonRelease:
+				mouse_release_handler(detail, x, y, game);
+				break ;
+			case XI_KeyPress:
+				key_press_handler(detail, game);
+				break ;
+			case XI_KeyRelease:
+				key_release_handler(detail, game);
+				break ;
+		}
 	}
 }
